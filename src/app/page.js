@@ -10,7 +10,7 @@ const poppins = Poppins({
   subsets:['latin'],
   display:'swap'
 })
-// Simplified page.js for debugging
+
 export default function Home() {
   const rituals = [
     { title: 'नहाए खाए', description: 'नहाए खाए छठ पूजा का पहला दिन होता है। इस दिन, भक्त नदी या तालाब में पवित्र स्नान करते हैं और सूर्य देव को अपने प्रार्थनाएं अर्पित करते हैं। यह एक शुद्धिकरण का समय है, और वे खाने के लिए पारंपरिक व्यंजन तैयार करते हैं। इस अनुष्ठान को शरीर और आत्मा को शुद्ध करने के लिए माना जाता है, ताकि भक्त आगामी पूजा के दिनों के लिए आध्यात्मिक रूप से तैयार हो सकें।', imageUrl:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.livehindustan.com%2Flh-img%2Fuploadimage%2Flibrary%2F2023%2F11%2F15%2F16_9%2F16_9_6%2Fchhath_puja_nahay_khay_prasad_kaddu_ki_sabji_recipe_1700026880.jpg&f=1&nofb=1&ipt=afe5ac41170bfc6d92503a0ae62920bbee74e0f3f59d9fb3bc9182e47c940179&ipo=images" },
@@ -42,7 +42,7 @@ export default function Home() {
         <h2 className="text-2xl text-white font-semibold mt-6 mb-4">Rituals</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {rituals.map((ritual, index) => (
-           <div className="grid grid-col-2"> <RitualCard key={index} title={ritual.title} description={ritual.description} imageUrl={ritual.imageUrl} /> </div>
+           <div key={index} className="grid grid-col-2"> <RitualCard key={index} title={ritual.title} description={ritual.description} imageUrl={ritual.imageUrl} /> </div>
           ))}
         </div>
         </div>

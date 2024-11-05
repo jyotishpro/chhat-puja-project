@@ -4,10 +4,10 @@ import '../globals.css';
 import Link from 'next/link';
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false); // State to manage menu visibility
+  const [isOpen, setIsOpen] = useState(false); 
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen); // Toggle the menu
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -16,24 +16,20 @@ export default function Navbar() {
         <h1 className="text-white">Chhath Puja Hub</h1>
        
         <button
-          className="text-white md:hidden" // Hidden on medium screens and above
+          className="text-white md:hidden" 
           onClick={toggleMenu}
         >
-          {isOpen ? '✖' : '☰'} // Show cut or hamburger icon
+          {isOpen ? '✖' : '☰'} 
         </button>
       </div>
       <nav className={`mt-4 ${isOpen ? 'block' : 'hidden'} md:block`}>
         <ul className="flex flex-col md:flex-row md:space-x-4">
           <li>
-            <a href="/" className="text-white hover:underline">
-              Rituals
-            </a>
+            <Link href={`/`}>Rituals</Link>
           </li>
          
           <li>
-            <a href="/" className="text-white hover:underline">
-              calendar
-            </a>
+           <Link href={`/`}>Calendar</Link>
           </li>
         </ul>
       </nav>
