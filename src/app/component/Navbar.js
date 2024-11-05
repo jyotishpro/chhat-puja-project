@@ -25,11 +25,11 @@ export default function Navbar() {
       <nav className={`mt-4 ${isOpen ? 'block' : 'hidden'} md:block`}>
         <ul className="flex flex-col md:flex-row md:space-x-4">
           <li>
-            <Link href={`/`}>Rituals</Link>
+            <Link className='text-white' href={`/`}>Rituals</Link>
           </li>
          
           <li>
-           <Link href={`/`}>Calendar</Link>
+           <Link className='text-white' href={`/`}>Calendar</Link>
           </li>
         </ul>
       </nav>
