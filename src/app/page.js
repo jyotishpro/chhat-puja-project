@@ -22,13 +22,13 @@ export default function Home() {
 
   useEffect(() => {
     const handleRouterQuery = () => {
-      
       if (router.query && router.query.user) {
         setName(router.query.user);
+      } else {
+        setName('Jyotish Kumar');
       }
     };
 
-    
     const timer = setTimeout(handleRouterQuery, 100);
     return () => clearTimeout(timer); 
   }, [router.query]);
@@ -53,7 +53,7 @@ export default function Home() {
         <div className="container mx-auto p-6">
           <h1 className="text-3xl text-white font-bold mb-4">Welcome to Chhath Puja Hub</h1>
           <p className='text-white mb-5'>Created by Jyotish Kumar <Link href={`https://github.com/jyotishpro`}>(github)</Link></p>
-          <h1 className="text-3xl text-orange-100 font-bold mb-4">{`${name || 'jyotish kumar'} की तरफ से आप सभी को छठ पूजा की हार्दिक शुभकामनाएं`}</h1>
+          <h1 className="text-3xl text-orange-100 font-bold mb-4">{`${name} की तरफ से आप सभी को छठ पूजा की हार्दिक शुभकामनाएं`}</h1>
         </div>
 
         <WishForm name={name} setName={setName} />
@@ -62,7 +62,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {rituals.map((ritual, index) => (
             <div key={index} className="grid grid-col-2">
-              <RitualCard key={index} title={ritual.title} description={ritual.description} imageUrl={ritual.imageUrl} />
+              <RitualCard title={ritual.title} description={ritual.description} imageUrl={ritual.imageUrl} />
             </div>
           ))}
         </div>
