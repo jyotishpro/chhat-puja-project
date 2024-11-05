@@ -1,11 +1,12 @@
 "use client";
 import { useState } from 'react';
 import Image from 'next/image';
+
 const WishForm = ({ name, setName }) => {
   const [wishSent, setWishSent] = useState(false); 
 
   const sendWish = () => {
-    const message = `सूर्य की आराधना का पर्व है छठ, आस्था का संगम है छठ, मनोवांछित फल की प्राप्ति का पर्व है छठ। ${name} की तरफ से छठ पूजा की हार्दिक शुभकामनाएं!  \n send your wishes : https://chhat-puja-project.vercel.app/`;
+    const message = `सूर्य की आराधना का पर्व है छठ, आस्था का संगम है छठ, मनोवांछित फल की प्राप्ति का पर्व है छठ। ${name || 'Jyotish Kumar'} की तरफ से छठ पूजा की हार्दिक शुभकामनाएं! \n send your wishes: https://chhat-puja-project.vercel.app/?user=${encodeURIComponent(name)}`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank'); 
     setWishSent(true); 
@@ -36,9 +37,11 @@ const WishForm = ({ name, setName }) => {
             <Image
               src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.news18.com%2Fibnlive%2Fuploads%2F2021%2F11%2Fhappy-chhath-puja-2021-wishes-images-7-1.jpg%3Fimpolicy%3Dwebsite%26width%3D0%26height%3D0&f=1&nofb=1&ipt=f630aad81e60fdfa85b2c22882b1be6fe495083d28842a666be1b6ed1fb9ecf2&ipo=images" 
               alt="Chhath Puja Celebration"
+              width={64}
+              height={64}
               className="w-16 h-16 object-cover rounded-full mr-4"
             />
-            <p className="text-center text-lg">{`Happy Chhath Puja ${name}!`}</p>
+            <p className="text-center text-lg">{`Happy Chhath Puja ${name || 'Jyotish Kumar'}!`}</p>
           </div>
         </div>
       )}

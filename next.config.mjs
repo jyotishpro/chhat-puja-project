@@ -1,8 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ["external-content.duckduckgo.com"]
-    }
-};
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'external-content.duckduckgo.com',
+          port: '',
+          pathname: '/**',
+        },
 
-export default nextConfig;
+      ],
+    },
+  };
+  
+  export default nextConfig;
+  
