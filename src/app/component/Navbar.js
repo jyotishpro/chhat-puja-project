@@ -28,7 +28,7 @@ export default function Navbar() {
             <Link className='text-white' href={`/`}>Rituals</Link>
           </li>
          
-          <li>
+          <li className='text-white'>
            <Link className='text-white' href={`/`}>Calendar</Link>
           </li>
         </ul>

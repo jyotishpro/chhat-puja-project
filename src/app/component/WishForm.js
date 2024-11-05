@@ -6,7 +6,7 @@ const WishForm = () => {
   const [wishSent, setWishSent] = useState(false); 
 
   const sendWish = () => {
-    const message = `सूर्य की आराधना का पर्व है छठ, आस्था का संगम है छठ, मनोवांछित फल की प्राप्ति का पर्व है छठ। ${name} की तरफ से छठ पूजा की हार्दिक शुभकामनाएं!  \n`;
+    const message = `सूर्य की आराधना का पर्व है छठ, आस्था का संगम है छठ, मनोवांछित फल की प्राप्ति का पर्व है छठ। ${name} की तरफ से छठ पूजा की हार्दिक शुभकामनाएं!  \n send your wishes : https://chhat-puja-project.vercel.app/`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank'); 
     setWishSent(true); 
