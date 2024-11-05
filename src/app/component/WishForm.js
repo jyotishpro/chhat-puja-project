@@ -26,9 +26,9 @@ const WishForm = () => {
       />
       <button
         onClick={sendWish}
-        className="bg-yellow-900 text-white py-2 px-4 rounded hover:bg-yellow-400 transition duration-200"
+        className="bg-blue-950 text-white py-2 px-4 rounded hover:bg-yellow-400 transition duration-200"
       >
-        Send Wish
+        Send your Wishes
       </button>
 
     
