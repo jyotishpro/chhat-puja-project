@@ -26,7 +26,7 @@ const WishForm = ({ name, setName }) => {
         onClick={sendWish}
         className="bg-blue-950 text-white py-2 px-4 rounded hover:bg-yellow-400 transition duration-200"
       >
-        Send Wish
+        Send your Wishes
       </button>
 
       {wishSent && (
