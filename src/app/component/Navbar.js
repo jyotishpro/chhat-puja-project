@@ -11,9 +11,9 @@ export default function Navbar() {
   };
 
   return (
-    <div className="md:flex md:justify-around bg-blue-950 p-4">
+    <div className="md:flex md:justify-around bg-yellow-950 p-4">
       <div className="flex justify-between items-center text-2xl font-bold">
-        <h1 className="text-white">Chhath Puja Hub</h1>
+        <h1 className="text-white">Fest Hub</h1>
        
         <button
           className="text-white md:hidden" 
@@ -25,11 +25,17 @@ export default function Navbar() {
       <nav className={`mt-4 ${isOpen ? 'block' : 'hidden'} md:block`}>
         <ul className="flex flex-col md:flex-row md:space-x-4">
           <li>
-            <Link className='text-white' href={`/`}>Rituals</Link>
+            <Link className='text-white' href={`/festival`}>Festival</Link>
           </li>
          
           <li className='text-white'>
-           <Link className='text-white' href={`/`}>Calendar</Link>
+           <Link className='text-white' href={`/calendar`}>Calendar</Link>
+          </li>
+          <li className='text-white'>
+           <Link className='text-white' href={`/about`}>Virtual experience</Link>
+          </li>
+          <li className='text-white'>
+           <Link className='text-white' href={`/about`}>About</Link>
           </li>
         </ul>
       </nav>
